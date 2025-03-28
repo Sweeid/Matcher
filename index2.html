@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brottningsläger Matchschema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .individual-schedule {
+            background-color: #eaf7fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .match-number {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-schedule">
+	<img style="float:right" src="logo.png" height="140" width="140">
+        <h1>BK Starke träningsläger matchschema</h1>
+        <h2>12:00 - 14:00</h2>
+        <p>Klicka på ett namn för att se den personens hela matchschema.</p>
+
+<table>
+    <tr>
+        <th class="match-number">Match #</th>
+        <th>Tid</th>
+        <th>Matta 1</th>
+        <th>Matta 2</th>
+        <th>Matta 3</th>
+        <th>Matta 4</th>
+        <th>Matta 5</th>
+    </tr>
+    <tr>
+        <td class="match-number">1</td>
+        <td>12:00-12:04</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Frida')">Frida</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Karin')">Karin</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Quinna')">Quinna</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">2</td>
+        <td>12:04-12:08</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Alice')">Alice</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">3</td>
+        <td>12:08-12:12</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Ludvig')">Ludvig</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Rasmus')">Rasmus</a></td>
+        <td><a href="#" onclick="showSchedule('Bella')">Bella</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">4</td>
+        <td>12:12-12:16</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Gustav')">Gustav</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Alice')">Alice</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">5</td>
+        <td>12:16-12:20</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Noah')">Noah</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">6</td>
+        <td>12:20-12:24</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Maja')">Maja</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Zacharias')">Zacharias</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">7</td>
+        <td>12:24-12:28</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Frida')">Frida</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Ylva')">Ylva</a> vs <a href="#" onclick="showSchedule('Xander')">Xander</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">8</td>
+        <td>12:28-12:32</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Noah')">Noah</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Bella')">Bella</a> vs <a href="#" onclick="showSchedule('Alice')">Alice</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">9</td>
+        <td>12:32-12:36</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Rasmus')">Rasmus</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">10</td>
+        <td>12:36-12:40</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Maja')">Maja</a> vs <a href="#" onclick="showSchedule('Jonas')">Jonas</a></td>
+        <td><a href="#" onclick="showSchedule('Viktor')">Viktor</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">11</td>
+        <td>12:40-12:44</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Frida')">Frida</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">12</td>
+        <td>12:44-12:48</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">13</td>
+        <td>12:48-12:52</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Ludvig')">Ludvig</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Zacharias')">Zacharias</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">14</td>
+        <td>12:52-12:56</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Gustav')">Gustav</a></td>
+        <td><a href="#" onclick="showSchedule('Maja')">Maja</a> vs <a href="#" onclick="showSchedule('Noah')">Noah</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Rasmus')">Rasmus</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">15</td>
+        <td>12:56-13:00</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Viktor')">Viktor</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Bella')">Bella</a> vs <a href="#" onclick="showSchedule('Alice')">Alice</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">16</td>
+        <td>13:00-13:04</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Quinna')">Quinna</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">17</td>
+        <td>13:04-13:08</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">18</td>
+        <td>13:08-13:12</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Noah')">Noah</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Zacharias')">Zacharias</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">19</td>
+        <td>13:12-13:16</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Ylva')">Ylva</a> vs <a href="#" onclick="showSchedule('Zacharias')">Zacharias</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">20</td>
+        <td>13:16-13:20</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Maja')">Maja</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">21</td>
+        <td>13:20-13:24</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Frida')">Frida</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Zacharias')">Zacharias</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">22</td>
+        <td>13:24-13:28</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Noah')">Noah</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Bella')">Bella</a> vs <a href="#" onclick="showSchedule('Alice')">Alice</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">23</td>
+        <td>13:28-13:32</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Ludvig')">Ludvig</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Rasmus')">Rasmus</a></td>
+        <td><a href="#" onclick="showSchedule('Ylva')">Ylva</a> vs <a href="#" onclick="showSchedule('Zacharias')">Zacharias</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">24</td>
+        <td>13:32-13:36</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Maja')">Maja</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Xander')">Xander</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">25</td>
+        <td>13:36-13:40</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Emil')">Emil</a> vs <a href="#" onclick="showSchedule('Frida')">Frida</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">26</td>
+        <td>13:40-13:44</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">27</td>
+        <td>13:44-13:48</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Clara')">Clara</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Karin')">Karin</a> vs <a href="#" onclick="showSchedule('Maja')">Maja</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Simon')">Simon</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">28</td>
+        <td>13:48-13:52</td>
+        <td><a href="#" onclick="showSchedule('Björn')">Björn</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Ludvig')">Ludvig</a> vs <a href="#" onclick="showSchedule('Noah')">Noah</a></td>
+        <td><a href="#" onclick="showSchedule('Rasmus')">Rasmus</a> vs <a href="#" onclick="showSchedule('Ulla')">Ulla</a></td>
+        <td><a href="#" onclick="showSchedule('Zacharias')">Zacharias</a> vs <a href="#" onclick="showSchedule('Xander')">Xander</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">29</td>
+        <td>13:52-13:56</td>
+        <td><a href="#" onclick="showSchedule('Anna')">Anna</a> vs <a href="#" onclick="showSchedule('Björn')">Björn</a></td>
+        <td><a href="#" onclick="showSchedule('Frida')">Frida</a> vs <a href="#" onclick="showSchedule('Isak')">Isak</a></td>
+        <td><a href="#" onclick="showSchedule('Maja')">Maja</a> vs <a href="#" onclick="showSchedule('Olivia')">Olivia</a></td>
+        <td><a href="#" onclick="showSchedule('Peter')">Peter</a> vs <a href="#" onclick="showSchedule('Viktor')">Viktor</a></td>
+        <td><a href="#" onclick="showSchedule('Alice')">Alice</a> vs <a href="#" onclick="showSchedule('Bella')">Bella</a></td>
+    </tr>
+    <tr>
+        <td class="match-number">30</td>
+        <td>13:56-14:00</td>
+        <td><a href="#" onclick="showSchedule('Clara')">Clara</a> vs <a href="#" onclick="showSchedule('David')">David</a></td>
+        <td><a href="#" onclick="showSchedule('Gustav')">Gustav</a> vs <a href="#" onclick="showSchedule('Helena')">Helena</a></td>
+        <td><a href="#" onclick="showSchedule('Jonas')">Jonas</a> vs <a href="#" onclick="showSchedule('Ludvig')">Ludvig</a></td>
+        <td><a href="#" onclick="showSchedule('Quinna')">Quinna</a> vs <a href="#" onclick="showSchedule('Rasmus')">Rasmus</a></td>
+        <td><a href="#" onclick="showSchedule('Bella')">Bella</a> vs <a href="#" onclick="showSchedule('Ylva')">Ylva</a></td>
+    </tr>
+</table>
+        
+    </div>
+    
+    <div id="individual-schedule" style="display: none;">
+        <h2 id="schedule-title">Person X:s Matcher</h2>
+        <div class="individual-schedule" id="schedule-content"></div>
+        <a href="#" onclick="showMainSchedule()" class="back-link">← Tillbaka till hela schemat</a>
+    </div>
+    
+    <script>
+    // Match data for each wrestler
+    const scheduleData = {
+    "Anna": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        }
+    ],
+    "Björn": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        }
+    ],
+    "Emil": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        }
+    ],
+    "Frida": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        }
+    ],
+    "Jonas": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        }
+    ],
+    "Karin": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Noah",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        }
+    ],
+    "Peter": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        }
+    ],
+    "Quinna": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        }
+    ],
+    "Xander": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        }
+    ],
+    "Ylva": [
+        {
+            "match": 1,
+            "time": "12:00",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        }
+    ],
+    "Clara": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "David",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "David",
+            "mat": "Matta 1"
+        }
+    ],
+    "David": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Anna",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Björn",
+            "mat": "Matta 1"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Clara",
+            "mat": "Matta 1"
+        }
+    ],
+    "Gustav": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Emil",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Isak",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Helena",
+            "mat": "Matta 2"
+        }
+    ],
+    "Helena": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        }
+    ],
+    "Ludvig": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Noah",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Noah",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Noah",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Noah",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        }
+    ],
+    "Maja": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Noah",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Olivia",
+            "mat": "Matta 3"
+        }
+    ],
+    "Rasmus": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        }
+    ],
+    "Simon": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        }
+    ],
+    "Zacharias": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        }
+    ],
+    "Alice": [
+        {
+            "match": 2,
+            "time": "12:04",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 4,
+            "time": "12:12",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Bella",
+            "mat": "Matta 5"
+        }
+    ],
+    "Isak": [
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 23,
+            "time": "13:28",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Gustav",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 27,
+            "time": "13:44",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Frida",
+            "mat": "Matta 2"
+        }
+    ],
+    "Bella": [
+        {
+            "match": 3,
+            "time": "12:08",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 17,
+            "time": "13:04",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Xander",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Zacharias",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Alice",
+            "mat": "Matta 5"
+        },
+        {
+            "match": 30,
+            "time": "13:56",
+            "opponent": "Ylva",
+            "mat": "Matta 5"
+        }
+    ],
+    "Noah": [
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 8,
+            "time": "12:28",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 14,
+            "time": "12:52",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        }
+    ],
+    "Viktor": [
+        {
+            "match": 5,
+            "time": "12:16",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 7,
+            "time": "12:24",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Ulla",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 12,
+            "time": "12:44",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 15,
+            "time": "12:56",
+            "opponent": "Simon",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 18,
+            "time": "13:08",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 21,
+            "time": "13:20",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 25,
+            "time": "13:36",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Peter",
+            "mat": "Matta 4"
+        }
+    ],
+    "Olivia": [
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 9,
+            "time": "12:32",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 11,
+            "time": "12:40",
+            "opponent": "Ludvig",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 16,
+            "time": "13:00",
+            "opponent": "Karin",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 20,
+            "time": "13:16",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 24,
+            "time": "13:32",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Jonas",
+            "mat": "Matta 3"
+        },
+        {
+            "match": 29,
+            "time": "13:52",
+            "opponent": "Maja",
+            "mat": "Matta 3"
+        }
+    ],
+    "Ulla": [
+        {
+            "match": 6,
+            "time": "12:20",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 10,
+            "time": "12:36",
+            "opponent": "Viktor",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 13,
+            "time": "12:48",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 19,
+            "time": "13:12",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 22,
+            "time": "13:24",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 26,
+            "time": "13:40",
+            "opponent": "Quinna",
+            "mat": "Matta 4"
+        },
+        {
+            "match": 28,
+            "time": "13:48",
+            "opponent": "Rasmus",
+            "mat": "Matta 4"
+        }
+    ]
+};
+
+    function showSchedule(personId) {
+        document.getElementById('main-schedule').style.display = 'none';
+        document.getElementById('individual-schedule').style.display = 'block';
+        
+        const title = document.getElementById('schedule-title');
+        title.textContent = `${personId}:s Matcher`;
+        
+        const content = document.getElementById('schedule-content');
+        content.innerHTML = '';
+        
+        const matches = scheduleData[personId];
+        if (matches && matches.length > 0) {
+            const table = document.createElement('table');
+            const header = table.createTHead();
+            const headerRow = header.insertRow();
+            headerRow.insertCell().textContent = 'Match';
+            headerRow.insertCell().textContent = 'Tid';
+            headerRow.insertCell().textContent = 'Motståndare';
+            headerRow.insertCell().textContent = 'Matta';
+            
+            const tbody = table.createTBody();
+            matches.forEach(match => {
+                const row = tbody.insertRow();
+                row.insertCell().textContent = match.match;
+                row.insertCell().textContent = match.time;
+                row.insertCell().textContent = match.opponent;
+                row.insertCell().textContent = match.mat;
+            });
+            
+            content.appendChild(table);
+        } else {
+            content.textContent = 'Inga matcher hittades för denna person.';
+        }
+    }
+    
+    function showMainSchedule() {
+        document.getElementById('main-schedule').style.display = 'block';
+        document.getElementById('individual-schedule').style.display = 'none';
+    }
+</script>
+</body>
+</html>

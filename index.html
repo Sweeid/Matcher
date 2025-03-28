@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brottningsläger Matchschema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .individual-schedule {
+            background-color: #eaf7fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-schedule">
+	<img style="float:right" src="logo.png">
+        <h1>BK Starke träningsläger matchschema</h1>
+        <h2>12:00 - 14:00</h2>
+        <p>Klicka på ett namn för att se den personens hela matchschema.</p>
+
+        <table>
+    <tr>
+        <th>Tid</th>
+        <th>Matta 1</th>
+        <th>Matta 2</th>
+        <th>Matta 3</th>
+        <th>Matta 4</th>
+        <th>Matta 5</th>
+    </tr>
+    <tr>
+        <td>12:00-12:04</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('B')">B</a></td>
+        <td><a href="#" onclick="showSchedule('E')">E</a> vs <a href="#" onclick="showSchedule('F')">F</a></td>
+        <td><a href="#" onclick="showSchedule('K')">K</a> vs <a href="#" onclick="showSchedule('L')">L</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('S')">S</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+    </tr>
+    <tr>
+        <td>12:04-12:08</td>
+        <td><a href="#" onclick="showSchedule('C')">C</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('G')">G</a> vs <a href="#" onclick="showSchedule('H')">H</a></td>
+        <td><a href="#" onclick="showSchedule('M')">M</a> vs <a href="#" onclick="showSchedule('N')">N</a></td>
+        <td><a href="#" onclick="showSchedule('T')">T</a> vs <a href="#" onclick="showSchedule('U')">U</a></td>
+        <td><a href="#" onclick="showSchedule('X')">X</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+    </tr>
+    <tr>
+        <td>12:08-12:12</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('I')">I</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('O')">O</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+        <td><a href="#" onclick="showSchedule('Z')">Z</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+    </tr>
+    <tr>
+        <td>12:12-12:16</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('E')">E</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+        <td><a href="#" onclick="showSchedule('Q')">Q</a> vs <a href="#" onclick="showSchedule('K')">K</a></td>
+        <td><a href="#" onclick="showSchedule('X')">X</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+    </tr>
+    <tr>
+        <td>12:16-12:20</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+        <td><a href="#" onclick="showSchedule('Z')">Z</a> vs <a href="#" onclick="showSchedule('T')">T</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+    </tr>
+    <tr>
+        <td>12:20-12:24</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('J')">J</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+        <td><a href="#" onclick="showSchedule('U')">U</a> vs <a href="#" onclick="showSchedule('V')">V</a></td>
+        <td><a href="#" onclick="showSchedule('J')">J</a> vs <a href="#" onclick="showSchedule('K')">K</a></td>
+    </tr>
+    <tr>
+        <td>12:24-12:28</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('B')">B</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+        <td><a href="#" onclick="showSchedule('P')">P</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('W')">W</a> vs <a href="#" onclick="showSchedule('X')">X</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+    </tr>
+    <tr>
+        <td>12:28-12:32</td>
+        <td><a href="#" onclick="showSchedule('C')">C</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('K')">K</a> vs <a href="#" onclick="showSchedule('N')">N</a></td>
+        <td><a href="#" onclick="showSchedule('Y')">Y</a> vs <a href="#" onclick="showSchedule('Z')">Z</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+    </tr>
+    <tr>
+        <td>12:32-12:36</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('E')">E</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('U')">U</a></td>
+        <td><a href="#" onclick="showSchedule('P')">P</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+    </tr>
+    <tr>
+        <td>12:36-12:40</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('H')">H</a></td>
+        <td><a href="#" onclick="showSchedule('M')">M</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('S')">S</a> vs <a href="#" onclick="showSchedule('V')">V</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('S')">S</a></td>
+    </tr>
+    <tr>
+        <td>12:40-12:44</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('G')">G</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('O')">O</a> vs <a href="#" onclick="showSchedule('K')">K</a></td>
+        <td><a href="#" onclick="showSchedule('T')">T</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+        <td><a href="#" onclick="showSchedule('T')">T</a> vs <a href="#" onclick="showSchedule('U')">U</a></td>
+    </tr>
+    <tr>
+        <td>12:44-12:48</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('I')">I</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('X')">X</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+    </tr>
+    <tr>
+        <td>12:48-12:52</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('B')">B</a></td>
+        <td><a href="#" onclick="showSchedule('J')">J</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+        <td><a href="#" onclick="showSchedule('M')">M</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+        <td><a href="#" onclick="showSchedule('Z')">Z</a> vs <a href="#" onclick="showSchedule('R')">R</a></td>
+        <td><a href="#" onclick="showSchedule('X')">X</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+    </tr>
+    <tr>
+        <td>12:52-12:56</td>
+        <td><a href="#" onclick="showSchedule('C')">C</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('F')">F</a></td>
+        <td><a href="#" onclick="showSchedule('Q')">Q</a> vs <a href="#" onclick="showSchedule('K')">K</a></td>
+        <td><a href="#" onclick="showSchedule('S')">S</a> vs <a href="#" onclick="showSchedule('T')">T</a></td>
+        <td><a href="#" onclick="showSchedule('Z')">Z</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+    </tr>
+    <tr>
+        <td>12:56-13:00</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('I')">I</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('N')">N</a></td>
+        <td><a href="#" onclick="showSchedule('U')">U</a> vs <a href="#" onclick="showSchedule('X')">X</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+    </tr>
+    <tr>
+        <td>13:00-13:04</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('E')">E</a> vs <a href="#" onclick="showSchedule('H')">H</a></td>
+        <td><a href="#" onclick="showSchedule('M')">M</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+    </tr>
+    <tr>
+        <td>13:04-13:08</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('O')">O</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('W')">W</a> vs <a href="#" onclick="showSchedule('Z')">Z</a></td>
+        <td><a href="#" onclick="showSchedule('J')">J</a> vs <a href="#" onclick="showSchedule('K')">K</a></td>
+    </tr>
+    <tr>
+        <td>13:08-13:12</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('G')">G</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+        <td><a href="#" onclick="showSchedule('K')">K</a> vs <a href="#" onclick="showSchedule('L')">L</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('T')">T</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+    </tr>
+    <tr>
+        <td>13:12-13:16</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('B')">B</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+        <td><a href="#" onclick="showSchedule('S')">S</a> vs <a href="#" onclick="showSchedule('U')">U</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+    </tr>
+    <tr>
+        <td>13:16-13:20</td>
+        <td><a href="#" onclick="showSchedule('C')">C</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('I')">I</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('P')">P</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('X')">X</a></td>
+        <td><a href="#" onclick="showSchedule('P')">P</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+    </tr>
+    <tr>
+        <td>13:20-13:24</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+        <td><a href="#" onclick="showSchedule('K')">K</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('W')">W</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('S')">S</a></td>
+    </tr>
+    <tr>
+        <td>13:24-13:28</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+        <td><a href="#" onclick="showSchedule('Z')">Z</a> vs <a href="#" onclick="showSchedule('T')">T</a></td>
+        <td><a href="#" onclick="showSchedule('T')">T</a> vs <a href="#" onclick="showSchedule('U')">U</a></td>
+    </tr>
+    <tr>
+        <td>13:28-13:32</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('E')">E</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('V')">V</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+    </tr>
+    <tr>
+        <td>13:32-13:36</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('H')">H</a></td>
+        <td><a href="#" onclick="showSchedule('O')">O</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('S')">S</a> vs <a href="#" onclick="showSchedule('X')">X</a></td>
+        <td><a href="#" onclick="showSchedule('X')">X</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+    </tr>
+    <tr>
+        <td>13:36-13:40</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('B')">B</a></td>
+        <td><a href="#" onclick="showSchedule('G')">G</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('K')">K</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+        <td><a href="#" onclick="showSchedule('T')">T</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+        <td><a href="#" onclick="showSchedule('Z')">Z</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+    </tr>
+    <tr>
+        <td>13:40-13:44</td>
+        <td><a href="#" onclick="showSchedule('C')">C</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('I')">I</a> vs <a href="#" onclick="showSchedule('E')">E</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('U')">U</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+        <td><a href="#" onclick="showSchedule('F')">F</a> vs <a href="#" onclick="showSchedule('G')">G</a></td>
+    </tr>
+    <tr>
+        <td>13:44-13:48</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('J')">J</a> vs <a href="#" onclick="showSchedule('H')">H</a></td>
+        <td><a href="#" onclick="showSchedule('M')">M</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+        <td><a href="#" onclick="showSchedule('V')">V</a> vs <a href="#" onclick="showSchedule('Z')">Z</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+    </tr>
+    <tr>
+        <td>13:48-13:52</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('G')">G</a> vs <a href="#" onclick="showSchedule('F')">F</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('R')">R</a> vs <a href="#" onclick="showSchedule('X')">X</a></td>
+        <td><a href="#" onclick="showSchedule('J')">J</a> vs <a href="#" onclick="showSchedule('K')">K</a></td>
+    </tr>
+    <tr>
+        <td>13:52-13:56</td>
+        <td><a href="#" onclick="showSchedule('A')">A</a> vs <a href="#" onclick="showSchedule('D')">D</a></td>
+        <td><a href="#" onclick="showSchedule('E')">E</a> vs <a href="#" onclick="showSchedule('I')">I</a></td>
+        <td><a href="#" onclick="showSchedule('O')">O</a> vs <a href="#" onclick="showSchedule('P')">P</a></td>
+        <td><a href="#" onclick="showSchedule('S')">S</a> vs <a href="#" onclick="showSchedule('Y')">Y</a></td>
+        <td><a href="#" onclick="showSchedule('L')">L</a> vs <a href="#" onclick="showSchedule('M')">M</a></td>
+    </tr>
+    <tr>
+        <td>13:56-14:00</td>
+        <td><a href="#" onclick="showSchedule('B')">B</a> vs <a href="#" onclick="showSchedule('C')">C</a></td>
+        <td><a href="#" onclick="showSchedule('H')">H</a> vs <a href="#" onclick="showSchedule('J')">J</a></td>
+        <td><a href="#" onclick="showSchedule('K')">K</a> vs <a href="#" onclick="showSchedule('Q')">Q</a></td>
+        <td><a href="#" onclick="showSchedule('T')">T</a> vs <a href="#" onclick="showSchedule('W')">W</a></td>
+        <td><a href="#" onclick="showSchedule('N')">N</a> vs <a href="#" onclick="showSchedule('O')">O</a></td>
+    </tr>
+</table>
+
+        
+        
+    </div>
+    
+    <div id="individual-schedule" style="display: none;">
+        <h2 id="schedule-title">Person X:s Matcher</h2>
+        <div class="individual-schedule" id="schedule-content"></div>
+        <a href="#" onclick="showMainSchedule()" class="back-link">← Tillbaka till hela schemat</a>
+    </div>
+    
+    <script>
+        // Match data for each wrestler
+        const scheduleData = {
+    'A': [
+        { time: "12:00", opponent: "B", mat: "Matta 1" },
+        { time: "12:08", opponent: "C", mat: "Matta 1" },
+        { time: "12:16", opponent: "D", mat: "Matta 1" },
+        { time: "12:24", opponent: "B", mat: "Matta 1" },
+        { time: "12:32", opponent: "C", mat: "Matta 1" },
+        { time: "12:40", opponent: "D", mat: "Matta 1" },
+        { time: "12:48", opponent: "B", mat: "Matta 1" },
+        { time: "12:56", opponent: "C", mat: "Matta 1" },
+        { time: "13:04", opponent: "D", mat: "Matta 1" },
+        { time: "13:12", opponent: "B", mat: "Matta 1" },
+        { time: "13:20", opponent: "C", mat: "Matta 1" },
+        { time: "13:28", opponent: "D", mat: "Matta 1" },
+        { time: "13:36", opponent: "B", mat: "Matta 1" },
+        { time: "13:44", opponent: "C", mat: "Matta 1" },
+        { time: "13:52", opponent: "D", mat: "Matta 1" }
+    ],
+    'B': [
+        { time: "12:00", opponent: "A", mat: "Matta 1" },
+        { time: "12:12", opponent: "D", mat: "Matta 1" },
+        { time: "12:20", opponent: "C", mat: "Matta 1" },
+        { time: "12:24", opponent: "A", mat: "Matta 1" },
+        { time: "12:36", opponent: "D", mat: "Matta 1" },
+        { time: "12:44", opponent: "C", mat: "Matta 1" },
+        { time: "12:48", opponent: "A", mat: "Matta 1" },
+        { time: "13:00", opponent: "D", mat: "Matta 1" },
+        { time: "13:08", opponent: "C", mat: "Matta 1" },
+        { time: "13:12", opponent: "A", mat: "Matta 1" },
+        { time: "13:24", opponent: "D", mat: "Matta 1" },
+        { time: "13:32", opponent: "C", mat: "Matta 1" },
+        { time: "13:36", opponent: "A", mat: "Matta 1" },
+        { time: "13:48", opponent: "D", mat: "Matta 1" },
+        { time: "13:56", opponent: "C", mat: "Matta 1" }
+    ],
+    'E': [
+        { time: "12:00", opponent: "F", mat: "Matta 2" },
+        { time: "12:08", opponent: "Z", mat: "Matta 5" },
+        { time: "12:12", opponent: "G", mat: "Matta 2" },
+        { time: "12:20", opponent: "J", mat: "Matta 2" },
+        { time: "12:32", opponent: "I", mat: "Matta 2" },
+        { time: "12:44", opponent: "I", mat: "Matta 2" },
+        { time: "12:52", opponent: "Z", mat: "Matta 5" },
+        { time: "13:00", opponent: "H", mat: "Matta 2" },
+        { time: "13:12", opponent: "H", mat: "Matta 2" },
+        { time: "13:28", opponent: "I", mat: "Matta 2" },
+        { time: "13:36", opponent: "Z", mat: "Matta 5" },
+        { time: "13:40", opponent: "I", mat: "Matta 2" },
+        { time: "13:52", opponent: "I", mat: "Matta 2" }
+    ],
+    'F': [
+        { time: "12:00", opponent: "E", mat: "Matta 2" },
+        { time: "12:12", opponent: "G", mat: "Matta 5" },
+        { time: "12:24", opponent: "G", mat: "Matta 2" },
+        { time: "12:36", opponent: "H", mat: "Matta 2" },
+        { time: "12:52", opponent: "H", mat: "Matta 2" },
+        { time: "12:56", opponent: "G", mat: "Matta 5" },
+        { time: "13:04", opponent: "J", mat: "Matta 2" },
+        { time: "13:20", opponent: "G", mat: "Matta 2" },
+        { time: "13:32", opponent: "H", mat: "Matta 2" },
+        { time: "13:40", opponent: "G", mat: "Matta 5" },
+        { time: "13:48", opponent: "G", mat: "Matta 2" }
+    ],
+    'K': [
+        { time: "12:00", opponent: "L", mat: "Matta 3" },
+        { time: "12:12", opponent: "Q", mat: "Matta 3" },
+        { time: "12:20", opponent: "J", mat: "Matta 5" },
+        { time: "12:28", opponent: "N", mat: "Matta 3" },
+        { time: "12:40", opponent: "O", mat: "Matta 3" },
+        { time: "12:52", opponent: "Q", mat: "Matta 3" },
+        { time: "13:04", opponent: "J", mat: "Matta 5" },
+        { time: "13:08", opponent: "L", mat: "Matta 3" },
+        { time: "13:20", opponent: "Q", mat: "Matta 3" },
+        { time: "13:36", opponent: "M", mat: "Matta 3" },
+        { time: "13:48", opponent: "J", mat: "Matta 5" },
+        { time: "13:56", opponent: "Q", mat: "Matta 3" }
+    ],
+    'L': [
+        { time: "12:00", opponent: "K", mat: "Matta 3" },
+        { time: "12:16", opponent: "M", mat: "Matta 3" },
+        { time: "12:24", opponent: "M", mat: "Matta 5" },
+        { time: "12:32", opponent: "P", mat: "Matta 3" },
+        { time: "12:56", opponent: "N", mat: "Matta 3" },
+        { time: "13:08", opponent: "K", mat: "Matta 3" },
+        { time: "13:08", opponent: "M", mat: "Matta 5" },
+        { time: "13:24", opponent: "M", mat: "Matta 3" },
+        { time: "13:40", opponent: "P", mat: "Matta 3" },
+        { time: "13:52", opponent: "M", mat: "Matta 5" }
+    ],
+    'R': [
+        { time: "12:00", opponent: "S", mat: "Matta 4" },
+        { time: "12:32", opponent: "U", mat: "Matta 4" },
+        { time: "12:36", opponent: "S", mat: "Matta 5" },
+        { time: "12:48", opponent: "Z", mat: "Matta 4" },
+        { time: "13:08", opponent: "T", mat: "Matta 4" },
+        { time: "13:20", opponent: "S", mat: "Matta 5" },
+        { time: "13:28", opponent: "V", mat: "Matta 4" },
+        { time: "13:48", opponent: "X", mat: "Matta 4" }
+    ],
+    'S': [
+        { time: "12:00", opponent: "R", mat: "Matta 4" },
+        { time: "12:36", opponent: "V", mat: "Matta 4" },
+        { time: "12:36", opponent: "R", mat: "Matta 5" },
+        { time: "12:52", opponent: "T", mat: "Matta 4" },
+        { time: "13:12", opponent: "U", mat: "Matta 4" },
+        { time: "13:20", opponent: "R", mat: "Matta 5" },
+        { time: "13:32", opponent: "X", mat: "Matta 4" },
+        { time: "13:52", opponent: "Y", mat: "Matta 4" }
+    ],
+    'V': [
+        { time: "12:00", opponent: "W", mat: "Matta 5" },
+        { time: "12:08", opponent: "W", mat: "Matta 4" },
+        { time: "12:20", opponent: "U", mat: "Matta 4" },
+        { time: "12:36", opponent: "S", mat: "Matta 4" },
+        { time: "12:44", opponent: "W", mat: "Matta 5" },
+        { time: "13:00", opponent: "Y", mat: "Matta 4" },
+        { time: "13:16", opponent: "X", mat: "Matta 4" },
+        { time: "13:28", opponent: "R", mat: "Matta 4" },
+        { time: "13:28", opponent: "W", mat: "Matta 5" },
+        { time: "13:44", opponent: "Z", mat: "Matta 4" }
+    ],
+    'W': [
+        { time: "12:00", opponent: "V", mat: "Matta 5" },
+        { time: "12:08", opponent: "V", mat: "Matta 4" },
+        { time: "12:24", opponent: "X", mat: "Matta 4" },
+        { time: "12:40", opponent: "T", mat: "Matta 4" },
+        { time: "12:44", opponent: "V", mat: "Matta 5" },
+        { time: "13:04", opponent: "Z", mat: "Matta 4" },
+        { time: "13:20", opponent: "Y", mat: "Matta 4" },
+        { time: "13:28", opponent: "V", mat: "Matta 5" },
+        { time: "13:40", opponent: "U", mat: "Matta 4" },
+        { time: "13:56", opponent: "T", mat: "Matta 4" }
+    ],
+    'C': [
+        { time: "12:04", opponent: "D", mat: "Matta 1" },
+        { time: "12:08", opponent: "A", mat: "Matta 1" },
+        { time: "12:20", opponent: "B", mat: "Matta 1" },
+        { time: "12:28", opponent: "D", mat: "Matta 1" },
+        { time: "12:32", opponent: "A", mat: "Matta 1" },
+        { time: "12:44", opponent: "B", mat: "Matta 1" },
+        { time: "12:52", opponent: "D", mat: "Matta 1" },
+        { time: "12:56", opponent: "A", mat: "Matta 1" },
+        { time: "13:08", opponent: "B", mat: "Matta 1" },
+        { time: "13:16", opponent: "D", mat: "Matta 1" },
+        { time: "13:20", opponent: "A", mat: "Matta 1" },
+        { time: "13:32", opponent: "B", mat: "Matta 1" },
+        { time: "13:40", opponent: "D", mat: "Matta 1" },
+        { time: "13:44", opponent: "A", mat: "Matta 1" },
+        { time: "13:56", opponent: "B", mat: "Matta 1" }
+    ],
+    'D': [
+        { time: "12:04", opponent: "C", mat: "Matta 1" },
+        { time: "12:12", opponent: "B", mat: "Matta 1" },
+        { time: "12:16", opponent: "A", mat: "Matta 1" },
+        { time: "12:28", opponent: "C", mat: "Matta 1" },
+        { time: "12:36", opponent: "B", mat: "Matta 1" },
+        { time: "12:40", opponent: "A", mat: "Matta 1" },
+        { time: "12:52", opponent: "C", mat: "Matta 1" },
+        { time: "13:00", opponent: "B", mat: "Matta 1" },
+        { time: "13:04", opponent: "A", mat: "Matta 1" },
+        { time: "13:16", opponent: "C", mat: "Matta 1" },
+        { time: "13:24", opponent: "B", mat: "Matta 1" },
+        { time: "13:28", opponent: "A", mat: "Matta 1" },
+        { time: "13:40", opponent: "C", mat: "Matta 1" },
+        { time: "13:48", opponent: "B", mat: "Matta 1" },
+        { time: "13:52", opponent: "A", mat: "Matta 1" }
+    ],
+    'G': [
+        { time: "12:04", opponent: "H", mat: "Matta 2" },
+        { time: "12:12", opponent: "E", mat: "Matta 2" },
+        { time: "12:12", opponent: "F", mat: "Matta 5" },
+        { time: "12:24", opponent: "F", mat: "Matta 2" },
+        { time: "12:40", opponent: "J", mat: "Matta 2" },
+        { time: "12:48", opponent: "J", mat: "Matta 2" },
+        { time: "12:56", opponent: "F", mat: "Matta 5" },
+        { time: "13:08", opponent: "I", mat: "Matta 2" },
+        { time: "13:20", opponent: "F", mat: "Matta 2" },
+        { time: "13:36", opponent: "J", mat: "Matta 2" },
+        { time: "13:40", opponent: "F", mat: "Matta 5" },
+        { time: "13:48", opponent: "F", mat: "Matta 2" }
+    ],
+    'H': [
+        { time: "12:04", opponent: "G", mat: "Matta 2" },
+        { time: "12:16", opponent: "I", mat: "Matta 2" },
+        { time: "12:16", opponent: "I", mat: "Matta 5" },
+        { time: "12:28", opponent: "J", mat: "Matta 2" },
+        { time: "12:36", opponent: "F", mat: "Matta 2" },
+        { time: "12:52", opponent: "F", mat: "Matta 2" },
+        { time: "13:00", opponent: "E", mat: "Matta 2" },
+        { time: "13:00", opponent: "I", mat: "Matta 5" },
+        { time: "13:12", opponent: "E", mat: "Matta 2" },
+        { time: "13:24", opponent: "J", mat: "Matta 2" },
+        { time: "13:32", opponent: "F", mat: "Matta 2" },
+        { time: "13:44", opponent: "J", mat: "Matta 2" },
+        { time: "13:44", opponent: "I", mat: "Matta 5" },
+        { time: "13:56", opponent: "J", mat: "Matta 2" }
+    ],
+    'M': [
+        { time: "12:04", opponent: "N", mat: "Matta 3" },
+        { time: "12:16", opponent: "L", mat: "Matta 3" },
+        { time: "12:24", opponent: "L", mat: "Matta 5" },
+        { time: "12:36", opponent: "Q", mat: "Matta 3" },
+        { time: "12:48", opponent: "O", mat: "Matta 3" },
+        { time: "13:00", opponent: "P", mat: "Matta 3" },
+        { time: "13:08", opponent: "L", mat: "Matta 5" },
+        { time: "13:16", opponent: "P", mat: "Matta 3" },
+        { time: "13:24", opponent: "L", mat: "Matta 3" },
+        { time: "13:36", opponent: "K", mat: "Matta 3" },
+        { time: "13:44", opponent: "O", mat: "Matta 3" },
+        { time: "13:52", opponent: "L", mat: "Matta 5" }
+    ],
+    'N': [
+        { time: "12:04", opponent: "M", mat: "Matta 3" },
+        { time: "12:20", opponent: "O", mat: "Matta 3" },
+        { time: "12:28", opponent: "K", mat: "Matta 3" },
+        { time: "12:28", opponent: "O", mat: "Matta 5" },
+        { time: "12:44", opponent: "P", mat: "Matta 3" },
+        { time: "12:56", opponent: "L", mat: "Matta 3" },
+        { time: "13:12", opponent: "O", mat: "Matta 3" },
+        { time: "13:12", opponent: "O", mat: "Matta 5" },
+        { time: "13:28", opponent: "P", mat: "Matta 3" },
+        { time: "13:48", opponent: "Q", mat: "Matta 3" },
+        { time: "13:56", opponent: "O", mat: "Matta 5" }
+    ],
+    'T': [
+        { time: "12:04", opponent: "U", mat: "Matta 4" },
+        { time: "12:16", opponent: "Z", mat: "Matta 4" },
+        { time: "12:40", opponent: "W", mat: "Matta 4" },
+        { time: "12:40", opponent: "U", mat: "Matta 5" },
+        { time: "12:52", opponent: "S", mat: "Matta 4" },
+        { time: "13:08", opponent: "R", mat: "Matta 4" },
+        { time: "13:24", opponent: "Z", mat: "Matta 4" },
+        { time: "13:24", opponent: "U", mat: "Matta 5" },
+        { time: "13:36", opponent: "Y", mat: "Matta 4" },
+        { time: "13:56", opponent: "W", mat: "Matta 4" }
+    ],
+    'U': [
+        { time: "12:04", opponent: "T", mat: "Matta 4" },
+        { time: "12:20", opponent: "V", mat: "Matta 4" },
+        { time: "12:32", opponent: "R", mat: "Matta 4" },
+        { time: "12:40", opponent: "T", mat: "Matta 5" },
+        { time: "12:56", opponent: "X", mat: "Matta 4" },
+        { time: "13:12", opponent: "S", mat: "Matta 4" },
+        { time: "13:24", opponent: "T", mat: "Matta 5" },
+        { time: "13:40", opponent: "W", mat: "Matta 4" }
+    ],
+    'X': [
+        { time: "12:04", opponent: "Y", mat: "Matta 5" },
+        { time: "12:12", opponent: "Y", mat: "Matta 4" },
+        { time: "12:24", opponent: "W", mat: "Matta 4" },
+        { time: "12:44", opponent: "Y", mat: "Matta 4" },
+        { time: "12:48", opponent: "Y", mat: "Matta 5" },
+        { time: "12:56", opponent: "U", mat: "Matta 4" },
+        { time: "13:16", opponent: "V", mat: "Matta 4" },
+        { time: "13:32", opponent: "S", mat: "Matta 4" },
+        { time: "13:32", opponent: "Y", mat: "Matta 5" },
+        { time: "13:48", opponent: "R", mat: "Matta 4" }
+    ],
+    'Y': [
+        { time: "12:04", opponent: "X", mat: "Matta 5" },
+        { time: "12:12", opponent: "X", mat: "Matta 4" },
+        { time: "12:28", opponent: "Z", mat: "Matta 4" },
+        { time: "12:44", opponent: "X", mat: "Matta 4" },
+        { time: "12:48", opponent: "X", mat: "Matta 5" },
+        { time: "13:00", opponent: "V", mat: "Matta 4" },
+        { time: "13:20", opponent: "W", mat: "Matta 4" },
+        { time: "13:32", opponent: "X", mat: "Matta 5" },
+        { time: "13:36", opponent: "T", mat: "Matta 4" },
+        { time: "13:52", opponent: "S", mat: "Matta 4" }
+    ],
+    'I': [
+        { time: "12:08", opponent: "J", mat: "Matta 2" },
+        { time: "12:16", opponent: "H", mat: "Matta 2" },
+        { time: "12:16", opponent: "H", mat: "Matta 5" },
+        { time: "12:32", opponent: "E", mat: "Matta 2" },
+        { time: "12:44", opponent: "E", mat: "Matta 2" },
+        { time: "12:56", opponent: "J", mat: "Matta 2" },
+        { time: "13:00", opponent: "H", mat: "Matta 5" },
+        { time: "13:08", opponent: "G", mat: "Matta 2" },
+        { time: "13:16", opponent: "J", mat: "Matta 2" },
+        { time: "13:28", opponent: "E", mat: "Matta 2" },
+        { time: "13:40", opponent: "E", mat: "Matta 2" },
+        { time: "13:44", opponent: "H", mat: "Matta 5" },
+        { time: "13:52", opponent: "E", mat: "Matta 2" }
+    ],
+    'J': [
+        { time: "12:08", opponent: "I", mat: "Matta 2" },
+        { time: "12:20", opponent: "E", mat: "Matta 2" },
+        { time: "12:20", opponent: "K", mat: "Matta 5" },
+        { time: "12:28", opponent: "H", mat: "Matta 2" },
+        { time: "12:40", opponent: "G", mat: "Matta 2" },
+        { time: "12:48", opponent: "G", mat: "Matta 2" },
+        { time: "12:56", opponent: "I", mat: "Matta 2" },
+        { time: "13:04", opponent: "F", mat: "Matta 2" },
+        { time: "13:04", opponent: "K", mat: "Matta 5" },
+        { time: "13:16", opponent: "I", mat: "Matta 2" },
+        { time: "13:24", opponent: "H", mat: "Matta 2" },
+        { time: "13:36", opponent: "G", mat: "Matta 2" },
+        { time: "13:44", opponent: "H", mat: "Matta 2" },
+        { time: "13:48", opponent: "K", mat: "Matta 5" },
+        { time: "13:56", opponent: "H", mat: "Matta 2" }
+    ],
+    'O': [
+        { time: "12:08", opponent: "P", mat: "Matta 3" },
+        { time: "12:20", opponent: "N", mat: "Matta 3" },
+        { time: "12:28", opponent: "N", mat: "Matta 5" },
+        { time: "12:40", opponent: "K", mat: "Matta 3" },
+        { time: "12:48", opponent: "M", mat: "Matta 3" },
+        { time: "13:04", opponent: "Q", mat: "Matta 3" },
+        { time: "13:12", opponent: "N", mat: "Matta 3" },
+        { time: "13:12", opponent: "N", mat: "Matta 5" },
+        { time: "13:32", opponent: "Q", mat: "Matta 3" },
+        { time: "13:44", opponent: "M", mat: "Matta 3" },
+        { time: "13:52", opponent: "P", mat: "Matta 3" },
+        { time: "13:56", opponent: "N", mat: "Matta 5" }
+    ],
+    'P': [
+        { time: "12:08", opponent: "O", mat: "Matta 3" },
+        { time: "12:24", opponent: "Q", mat: "Matta 3" },
+        { time: "12:32", opponent: "L", mat: "Matta 3" },
+        { time: "12:32", opponent: "Q", mat: "Matta 5" },
+        { time: "12:44", opponent: "N", mat: "Matta 3" },
+        { time: "13:00", opponent: "M", mat: "Matta 3" },
+        { time: "13:16", opponent: "M", mat: "Matta 3" },
+        { time: "13:16", opponent: "Q", mat: "Matta 5" },
+        { time: "13:28", opponent: "N", mat: "Matta 3" },
+        { time: "13:40", opponent: "L", mat: "Matta 3" },
+        { time: "13:52", opponent: "O", mat: "Matta 3" }
+    ],
+    'Z': [
+        { time: "12:08", opponent: "E", mat: "Matta 5" },
+        { time: "12:16", opponent: "T", mat: "Matta 4" },
+        { time: "12:28", opponent: "Y", mat: "Matta 4" },
+        { time: "12:48", opponent: "R", mat: "Matta 4" },
+        { time: "12:52", opponent: "E", mat: "Matta 5" },
+        { time: "13:04", opponent: "W", mat: "Matta 4" },
+        { time: "13:24", opponent: "T", mat: "Matta 4" },
+        { time: "13:36", opponent: "E", mat: "Matta 5" },
+        { time: "13:44", opponent: "V", mat: "Matta 4" }
+    ],
+    'Q': [
+        { time: "12:12", opponent: "K", mat: "Matta 3" },
+        { time: "12:24", opponent: "P", mat: "Matta 3" },
+        { time: "12:32", opponent: "P", mat: "Matta 5" },
+        { time: "12:36", opponent: "M", mat: "Matta 3" },
+        { time: "12:52", opponent: "K", mat: "Matta 3" },
+        { time: "13:04", opponent: "O", mat: "Matta 3" },
+        { time: "13:16", opponent: "P", mat: "Matta 5" },
+        { time: "13:20", opponent: "K", mat: "Matta 3" },
+        { time: "13:32", opponent: "O", mat: "Matta 3" },
+        { time: "13:48", opponent: "N", mat: "Matta 3" },
+        { time: "13:56", opponent: "K", mat: "Matta 3" }
+    ]
+};
+        
+        function showSchedule(personId) {
+            document.getElementById('main-schedule').style.display = 'none';
+            document.getElementById('individual-schedule').style.display = 'block';
+            
+            const title = document.getElementById('schedule-title');
+            title.textContent = `Person ${personId}:s Matcher`;
+            
+            const content = document.getElementById('schedule-content');
+            content.innerHTML = '';
+            
+            const matches = scheduleData[personId];
+            if (matches && matches.length > 0) {
+                const table = document.createElement('table');
+                const header = table.createTHead();
+                const headerRow = header.insertRow();
+                headerRow.insertCell().textContent = 'Tid';
+                headerRow.insertCell().textContent = 'Motståndare';
+                headerRow.insertCell().textContent = 'Matta';
+                
+                const tbody = table.createTBody();
+                matches.forEach(match => {
+                    const row = tbody.insertRow();
+                    row.insertCell().textContent = match.time;
+                    row.insertCell().textContent = match.opponent;
+                    row.insertCell().textContent = match.mat;
+                });
+                
+                content.appendChild(table);
+            } else {
+                content.textContent = 'Inga matcher hittades för denna person.';
+            }
+        }
+        
+        function showMainSchedule() {
+            document.getElementById('main-schedule').style.display = 'block';
+            document.getElementById('individual-schedule').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
